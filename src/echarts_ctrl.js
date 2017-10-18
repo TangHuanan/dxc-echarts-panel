@@ -58,7 +58,7 @@ export class EchartsCtrl extends MetricsPanelCtrl {
         function getQueryString() {
             let varList = that.dashboard.templating.list;
             let query = "?";
-            for (let i = 0; i < varList.lenght; i++) {
+            for (let i = 0; i < varList.length; i++) {
                 query += varList[i].label + "=" + varList[i].current.text + "&";
             }
             query += "from=" + that.range.from._d.valueOf() + "&";
