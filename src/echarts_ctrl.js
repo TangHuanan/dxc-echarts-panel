@@ -56,21 +56,20 @@ export class EchartsCtrl extends MetricsPanelCtrl {
         };
 
         function getQueryString() {
-            let varList = that.dashboard.templating.list
-            let query = "?"
+            let varList = that.dashboard.templating.list;
+            let query = "?";
             for (let i = 0; i < varList.lenght; i++) {
-                query += varList[i].label + "=" + varList[i].current.text + "&"
+                query += varList[i].label + "=" + varList[i].current.text + "&";
             }
-            query += "from=" + that.range.from._d.valueOf() + "&"
-            query += "to=" + that.range.to._d.valueOf()
-            return query
+            query += "from=" + that.range.from._d.valueOf() + "&";
+            query += "to=" + that.range.to._d.valueOf();
+            return query;
         }
 
 
 
         if (that.panel.USE_URL && !that.panel.USE_FAKE_DATA && that.panel.url && that.panel.request) {
-            let channel
-            let url = that.panel.url + getQueryString()
+            let url = that.panel.url + getQueryString();
             xmlhttp.open("POST", , true);
             xmlhttp.send(that.panel.request);
         } else {
