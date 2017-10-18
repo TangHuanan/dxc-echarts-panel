@@ -123,7 +123,7 @@ System.register(['app/plugins/sdk', 'lodash', './libs/echarts.min', './libs/echa
                         function getQueryString() {
                             var varList = that.dashboard.templating.list;
                             var query = "?";
-                            for (var i = 0; i < varList.lenght; i++) {
+                            for (var i = 0; i < varList.length; i++) {
                                 query += varList[i].label + "=" + varList[i].current.text + "&";
                             }
                             query += "from=" + that.range.from._d.valueOf() + "&";
