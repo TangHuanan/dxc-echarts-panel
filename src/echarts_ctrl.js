@@ -70,7 +70,7 @@ export class EchartsCtrl extends MetricsPanelCtrl {
 
         if (that.panel.USE_URL && !that.panel.USE_FAKE_DATA && that.panel.url && that.panel.request) {
             let url = that.panel.url + getQueryString();
-            xmlhttp.open("POST", , true);
+            xmlhttp.open("POST", url, true);
             xmlhttp.send(that.panel.request);
         } else {
             xmlhttp = null;
