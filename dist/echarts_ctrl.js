@@ -126,8 +126,14 @@ System.register(['app/plugins/sdk', 'lodash', './libs/echarts.min', './libs/echa
                             for (var i = 0; i < varList.length; i++) {
                                 query += varList[i].label + "=" + varList[i].current.text + "&";
                             }
-                            query += "from=" + that.range.from._d.valueOf() + "&";
-                            query += "to=" + that.range.to._d.valueOf();
+                            if (that.hasOwnProperty("range")) {
+                                query += "from=" + that.range.from._d.valueOf() + "&";
+                                query += "to=" + that.range.to._d.valueOf();
+                            } else {
+                                var now = new Date().valueOf();
+                                query += "from=" + now - 1000 * 60 * 60 * 6 + "&";
+                                query += "to=" + now;
+                            }
                             return query;
                         }
 
