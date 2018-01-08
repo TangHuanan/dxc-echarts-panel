@@ -5,8 +5,6 @@ import './libs/echarts-liquidfill.min';
 import './libs/echarts-wordcloud.min';
 import './libs/dark';
 import './style.css!';
-import './libs/bmap.js';
-import './libs/getBmap.js';
 
 export class EchartsCtrl extends MetricsPanelCtrl {
 
